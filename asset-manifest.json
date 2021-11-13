@@ -1,0 +1,34 @@
+{
+  "files": {
+    "main.css": "/gallery/static/css/main.9f27824e.chunk.css",
+    "main.js": "/gallery/static/js/main.76797226.chunk.js",
+    "main.js.map": "/gallery/static/js/main.76797226.chunk.js.map",
+    "runtime-main.js": "/gallery/static/js/runtime-main.08e679cf.js",
+    "runtime-main.js.map": "/gallery/static/js/runtime-main.08e679cf.js.map",
+    "static/js/2.5d92a688.chunk.js": "/gallery/static/js/2.5d92a688.chunk.js",
+    "static/js/2.5d92a688.chunk.js.map": "/gallery/static/js/2.5d92a688.chunk.js.map",
+    "static/js/3.7eded6ca.chunk.js": "/gallery/static/js/3.7eded6ca.chunk.js",
+    "static/js/3.7eded6ca.chunk.js.map": "/gallery/static/js/3.7eded6ca.chunk.js.map",
+    "index.html": "/gallery/index.html",
+    "static/css/main.9f27824e.chunk.css.map": "/gallery/static/css/main.9f27824e.chunk.css.map",
+    "static/js/2.5d92a688.chunk.js.LICENSE.txt": "/gallery/static/js/2.5d92a688.chunk.js.LICENSE.txt",
+    "static/media/ice cream.jpg": "/gallery/static/media/ice cream.a122fdd9.jpg",
+    "static/media/ice cream_thumb.png": "/gallery/static/media/ice cream_thumb.27ac4eea.png",
+    "static/media/mardi gras.jpg": "/gallery/static/media/mardi gras.47f65d49.jpg",
+    "static/media/mardi gras_thumb.png": "/gallery/static/media/mardi gras_thumb.f4b834fe.png",
+    "static/media/nightmare.jpg": "/gallery/static/media/nightmare.395cf36b.jpg",
+    "static/media/nightmare_thumb.png": "/gallery/static/media/nightmare_thumb.a52966fc.png",
+    "static/media/party.jpg": "/gallery/static/media/party.31ee054a.jpg",
+    "static/media/party_thumb.png": "/gallery/static/media/party_thumb.225d1884.png",
+    "static/media/pretty girl.jpg": "/gallery/static/media/pretty girl.af65f0c8.jpg",
+    "static/media/pretty girl_thumb.png": "/gallery/static/media/pretty girl_thumb.fd8c6257.png",
+    "static/media/witches den.png": "/gallery/static/media/witches den.1a9e8131.png",
+    "static/media/witches den_thumb.png": "/gallery/static/media/witches den_thumb.8ed770cc.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.08e679cf.js",
+    "static/js/2.5d92a688.chunk.js",
+    "static/css/main.9f27824e.chunk.css",
+    "static/js/main.76797226.chunk.js"
+  ]
+}
