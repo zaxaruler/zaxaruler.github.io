@@ -11,6 +11,12 @@ display: inline-block;
 
 const Title = styled('h1')`
 color: white;
+font-family: 'Caveat', cursive;
+`;
+
+const Subtitle = styled('div')`
+color: darkgray;
+margin-bottom: 80px;
 `;
 
 const ImageContainer=styled('div')`display:flex`;
@@ -44,12 +50,13 @@ function MainPage() {
 
     return (
       <PageContainer>
-        <Title>Hello</Title>
+        <Title>Riding on a cloud</Title>
+        <Subtitle>by Zacharoula</Subtitle>
         <Menu />
         <ImageContainer>
           <Images>
           {imageList.map((image,index) =>
-            <img key={index} alt="Sharona" src={imageList[index]} onClick={() => {openCarousel(index)}} />
+            <img key={index} alt="" src={imageList[index]} onClick={() => {openCarousel(index)}} />
           )}
           </Images>
           {isCarouselOpen && <GalleryCarousel isCarouselOpen={isCarouselOpen} setIsCarouselOpen={setIsCarouselOpen} selectedImage={selectedImage} setSelectedImage={setSelectedImage} />}

@@ -11,8 +11,11 @@ var ice_cream = require('../images/ice cream.jpg').default;
 var pretty_girl = require('../images/pretty girl.jpg').default;
 var witches = require('../images/witches den.png').default;
 
+
+
 const Carousel = styled('div')`
   display: flex;
+  flex-direction: column;
   justify-content: center;
   height:100%;
     img {
@@ -61,7 +64,7 @@ const customStyles = {
 
   const Button = styled('button')`
     border: none;
-    background-color:transparent;
+    background-color: transparent;
     cursor: pointer;
     border-radius: 50%;
     margin: 5px;
@@ -71,9 +74,22 @@ const customStyles = {
     }
   `;
 
+  const Description = styled('div')`
+    color: darkgray;
+    font-family: 'Caveat', cursive;
+    text-align: center;
+    margin-top: 30px;
+    font-size: 1.7rem;
+  `;
+
 function GalleryCarousel({isCarouselOpen, setIsCarouselOpen, selectedImage, setSelectedImage}) {
 
-    const imageList = [nightmare, party, mardi_gras, ice_cream, pretty_girl, witches];
+  const imageList= [{icon: nightmare, description:"It was a beautiful moonlit night. Too bad Wolfgang was having a terrible nightmare." },
+  {icon: party, description: "They said that when the world would come to an end they would celebrate."},
+  {icon: mardi_gras, description: "My father was one of many that went missing that day."},
+  {icon: ice_cream, description: "Nothing better than a cold ice cream on a burning hot day!"},
+  {icon: pretty_girl, description: "The party was in a few hours. She still had time to apply some finishing touches."},
+  {icon: witches, description: "It was always nice to return home, after a long day."}];
 
     const closeCarousel = () => {
         setIsCarouselOpen(false);
@@ -133,15 +149,16 @@ function GalleryCarousel({isCarouselOpen, setIsCarouselOpen, selectedImage, setS
       onRequestClose={closeCarousel}
       >
         <Carousel>
-        <img alt="" src={imageList[selectedImage]} />
-        <ButtonWrapper>
-            <Button onClick= {()=>{ShowPreviousImage()}}>
-            <CaretLeft color="#AE2983" weight="fill" size={40} />
-            </Button>
-            <Button onClick= {()=>{ShowNextImage()}}>
-            <CaretRight color="#AE2983" weight="fill" size={40} />
-            </Button>
-        </ButtonWrapper>
+            <img alt="" src={imageList[selectedImage].icon} />
+            <Description>{imageList[selectedImage].description}</Description>
+          <ButtonWrapper>
+              <Button onClick= {()=>{ShowPreviousImage()}}>
+                <CaretLeft color="#AE2983" weight="fill" size={40} />
+              </Button>
+              <Button onClick= {()=>{ShowNextImage()}}>
+                <CaretRight color="#AE2983" weight="fill" size={40} />
+              </Button>
+          </ButtonWrapper>
         </Carousel>
       </Modal>
     );
