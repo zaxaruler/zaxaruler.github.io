@@ -6,12 +6,13 @@ import { useRef, useEffect } from 'react';
 
 var nightmare = require('../images/nightmare.jpg').default;
 var party = require('../images/party.jpg').default;
-var mardi_gras = require('../images/mardi gras.jpg').default;
+var mardi_gras = require('../images/mardi gras.png').default;
 var ice_cream = require('../images/ice cream.jpg').default;
 var pretty_girl = require('../images/pretty girl.jpg').default;
 var witches = require('../images/witches den.png').default;
-
-
+var cloud = require('../images/riding on a cloud.jpg').default;
+var marianne = require('../images/marianne.png').default;
+var princesses = require('../images/princesses.png').default;
 
 const Carousel = styled('div')`
   display: flex;
@@ -85,11 +86,14 @@ const customStyles = {
 function GalleryCarousel({isCarouselOpen, setIsCarouselOpen, selectedImage, setSelectedImage}) {
 
   const imageList= [{icon: nightmare, description:"It was a beautiful moonlit night. Too bad Wolfgang was having a terrible nightmare." },
-  {icon: party, description: "They said that when the world would come to an end they would celebrate."},
+  {icon: party, description: "They said that when the world would come to an end, they would all celebrate."},
   {icon: mardi_gras, description: "My father was one of many that went missing that day."},
   {icon: ice_cream, description: "Nothing better than a cold ice cream on a burning hot day!"},
   {icon: pretty_girl, description: "The party was in a few hours. She still had time to apply some finishing touches."},
-  {icon: witches, description: "It was always nice to return home, after a long day."}];
+  {icon: witches, description: "It was always nice to return home, after a long day."},
+  {icon: cloud, description: "While riding his bicycle the world would become peaceful and quiet."},
+  {icon: marianne, description: "It was at night that Marianne would become very aware of the fact that she lived inside a box... next to other boxes."},
+  {icon: princesses, description: "The oldest sister went to her bed and knocked on it. It immediately sank beneath the floor, and they all climbed down through the opening, one after the other, the oldest one leading the way."}];
 
     const closeCarousel = () => {
         setIsCarouselOpen(false);

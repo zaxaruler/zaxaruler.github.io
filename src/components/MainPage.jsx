@@ -7,6 +7,7 @@ const PageContainer = styled('div')`
 background-color: #161616;
 width: 1060px;
 display: inline-block; 
+margin-bottom: 80px;
 `;
 
 const Title = styled('h1')`
@@ -37,9 +38,12 @@ var mardi_gras = require('../images/mardi gras_thumb.png').default;
 var ice_cream = require('../images/ice cream_thumb.png').default;
 var pretty_girl = require('../images/pretty girl_thumb.png').default;
 var witches = require('../images/witches den_thumb.png').default;
+var cloud = require('../images/riding on a cloud_thumb.png').default;
+var marianne = require('../images/marianne_thumb.png').default;
+var princesses = require('../images/princesses_thumb.png').default;
 
 function MainPage() {
-  const imageList= [nightmare, party, mardi_gras, ice_cream, pretty_girl, witches];
+  const imageList= [nightmare, party, mardi_gras, ice_cream, pretty_girl, witches, cloud, marianne, princesses];
   const [isCarouselOpen, setIsCarouselOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
 
