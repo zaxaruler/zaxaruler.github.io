@@ -18,7 +18,8 @@ const Carousel = styled('div')`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height:100%;
+  height: 100%;
+  
     img {
         max-height: 80%;
         max-width: 100%;

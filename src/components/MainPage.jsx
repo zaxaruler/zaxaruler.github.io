@@ -26,12 +26,19 @@ margin-bottom: 80px;
 const ImageContainer=styled('div')`display:flex`;
 
 const Images = styled('div')`
+
 img {
   cursor: pointer;
   margin: 20px;
   max-width: 300px;
   width: auto;
   height: auto;
+  border: 1px solid #161616;
+  border-radius: 5px;
+
+  &:hover {
+   border: 1px solid #D3D3D3;
+  }
 }
 `;
 
