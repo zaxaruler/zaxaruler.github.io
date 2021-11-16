@@ -5,9 +5,12 @@ import GalleryCarousel from './GalleryCarousel';
 
 const PageContainer = styled('div')`
 background-color: #161616;
-width: 1060px;
 display: inline-block; 
-margin-bottom: 80px;
+padding-bottom: 80px;
+
+@media (min-width: 1159px) {
+  width: 1060px;
+}
 `;
 
 const Title = styled('h1')`
