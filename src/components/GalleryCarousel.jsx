@@ -1,7 +1,7 @@
 // import Carousel from 'nuka-carousel';
 import styled ,{css} from 'styled-components';
 import Modal from 'react-modal';
-import { CaretRight, CaretLeft } from "phosphor-react";
+import { CaretRight, CaretLeft, X } from "phosphor-react";
 import { useRef, useEffect } from 'react';
 
 var nightmare = require('../images/nightmare.jpg').default;
@@ -39,8 +39,8 @@ const customStyles = {
     content: {
     //   position: 'absolute',
     //   top: '40px',
-      left: '200px',
-      right: '200px',
+    //   left: '200px',
+    //   right: '200px',
     //   bottom: '40px',
     //   border: '1px solid #ccc',
       background: '#161616',
@@ -64,7 +64,7 @@ const customStyles = {
     align-items: center;
   `;
 
-  const Button = styled('button')`
+  const CarretButton = styled('button')`
     border: none;
     background-color: transparent;
     cursor: pointer;
@@ -75,6 +75,21 @@ const customStyles = {
       background-color: rgba(255, 255, 255, 0.34);
     }
   `;
+
+  const CloseButton = styled('button')`
+    top: 30px;
+    right: 30px;
+    position: absolute;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    border-radius: 50%;
+    margin: 5px;
+
+    &:hover{
+      background-color: rgba(255, 255, 255, 0.34);
+    }
+`;
 
   const Description = styled('div')`
     color: darkgray;
@@ -150,20 +165,25 @@ function GalleryCarousel({isCarouselOpen, setIsCarouselOpen, selectedImage, setS
     return (
       <Modal
       isOpen={isCarouselOpen}
-      style={customStyles}
+       style={customStyles}
       onRequestClose={closeCarousel}
+      appElement={document.getElementById('#root')}
       >
+       
         <Carousel>
             <img alt="" src={imageList[selectedImage].icon} />
             <Description>{imageList[selectedImage].description}</Description>
           <ButtonWrapper>
-              <Button onClick= {()=>{ShowPreviousImage()}}>
+              <CarretButton onClick = {()=>{ShowPreviousImage()}}>
                 <CaretLeft color="#AE2983" weight="fill" size={40} />
-              </Button>
-              <Button onClick= {()=>{ShowNextImage()}}>
+              </CarretButton>
+              <CarretButton onClick = {()=>{ShowNextImage()}}>
                 <CaretRight color="#AE2983" weight="fill" size={40} />
-              </Button>
+              </CarretButton>
           </ButtonWrapper>
+          <CloseButton onClick = {closeCarousel}>
+            <X color="#AE2983" weight="fill" size={40} />
+          </CloseButton>
         </Carousel>
       </Modal>
     );
